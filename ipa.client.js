@@ -28,7 +28,7 @@ module.exports = function(serverLocation) {
       client.log('<img src="' + url + '"/>', callback)
     },
     play: function ipaPlaySound(soundFile,callback) {
-      require.post({
+      request({
         url: fnurl('sound/' + soundFile)
       }, genericCallback(callback));
     }
