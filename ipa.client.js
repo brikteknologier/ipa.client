@@ -1,6 +1,6 @@
 var request = require('request');
 var path = require('path');
-var naan = require('naan')
+var naan = require('naan');
 
 module.exports = function(serverLocation) {
   var fnurl = function(path) {
@@ -26,6 +26,11 @@ module.exports = function(serverLocation) {
     },
     logImage: function ipaSendLogImage(url, callback) {
       client.log('<img src="' + url + '"/>', callback)
+    },
+    play: function ipaPlaySound(soundFile,callback) {
+      require.post({
+        url: fnurl('sound/' + soundFile)
+      }, genericCallback(callback));
     }
   }
 
