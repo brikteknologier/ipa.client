@@ -2,7 +2,7 @@
   "author": "Jon Packer <jon.packer@brik.no>",
   "name": "brik.ipa.client",
   "description": "easy access to methods of an ipa server",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": {
     "url": ""
   },
